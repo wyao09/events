@@ -1,0 +1,133 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <style>
+body {
+
+}
+.calender_wrapper{
+width:500px;
+min-height:150px;
+}
+
+.summary{
+color: #600;
+}
+.summary:hover{
+text-decoration:underline;
+cursor:pointer;
+}
+li{
+list-style:none;
+}
+ul{
+margin:.5em .5em 0 .5em;
+padding:0;
+}
+.details{
+display:none;
+min-height:1em;
+}
+.event:hover{
+background:lightgray !important;
+}
+.event:nth-child(odd){
+background:#eee;
+}
+.time{
+min-width:6em;
+display:block;
+float:left;
+}
+.location{
+margin-bottom:.5em;
+padding-left: 14px;
+font-size:12px;
+font-weight:bold;
+}
+.description{
+text-align:justify;
+padding: 0 1em 1em 1em;
+font-size:14px
+}
+.gcal{
+float:right;
+display:block;
+background:url(gcal.png) no-repeat;
+width:16px;
+height:16px;
+margin:0 .2em 0 .2em;
+cursor:pointer;
+opacity:0.3;
+}
+.previous{
+float:left;
+margin-left:8px;
+}
+.next{
+float:right;
+margin-right:8px;
+}
+.display-date{
+margin-left:9em;
+padding-left:.7em;
+width:110px;
+border-width:0px;
+background:#eee;
+-webkit-border-radius:4px;
+cursor:pointer;
+color:dimgray;
+font-size:16px;
+}
+.progress{
+margin-left:165px;
+}
+#ui-datepicker-div{
+font-size:10px;
+}
+.no-event{
+margin:auto;
+width:155px;
+}
+.today{
+font-size:10px;
+}
+
+	
+  </style>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-25313136-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = 'https://ssl.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+<div class="calender_wrapper">
+	<div class = "date-nav">
+		<button class = "previous">prev</button>
+		<input type = "textbox" class = "display-date" />
+		<button class = "today">today</button>
+		<button class = "next">next</button>
+	</div>
+	<img class = "progress" src="progress.gif"/>
+  <ul class="calender">
+  </ul>
+</div>
+
+ <!-- <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> --!>
+	<link rel="stylesheet" href="jquery-ui-1.8.16/themes/base/jquery.ui.all.css">
+	<script src="jquery-ui-1.8.16/jquery-1.6.2.js"></script>
+	<script src="jquery-ui-1.8.16/ui/jquery.ui.core.js"></script>
+	<script src="jquery-ui-1.8.16/ui/jquery.ui.datepicker.js"></script>
+	<script src = "script.js"></script>
+</body>
+</html>
